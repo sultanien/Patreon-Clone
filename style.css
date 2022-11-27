@@ -1,0 +1,592 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --coralRed:#ff424d 
+}
+body{
+    font-family:sans-serif;
+}
+img{
+    width: 100%;
+}
+
+.fa-regular, .fa-solid, .fa-light, .fa-thin{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+}
+/*for coral buttons*/
+.coral-button{
+    color: white;
+    background-color:var(--coralRed);
+    border:none;
+    padding: 0.8rem;
+    border:2px solid var(--coralRed);
+    border-radius: 2rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/*header section*/
+header{
+    display:flex;
+    background-color: white;
+    border-bottom:1px solid rgba(0,0,0,0.1);
+    position: fixed;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    font-size: 0.88rem;
+    z-index: 1;
+    top:0;
+}
+header a, ul:hover{
+    cursor: pointer;
+} 
+
+header .fa-brands{
+    color: var(--coralRed);
+    align-self: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+header .fa-brands:hover{
+    opacity: 0.5;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+ 
+header nav ul li {
+    display: inline-block;
+    margin-right: 1rem;
+    align-self: center;
+}
+
+header nav ul li button{
+    text-align: left;
+}
+header nav ul li:last-child{
+    margin-right: 0;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+}
+header nav ul li:hover{
+    text-decoration: underline;
+}
+
+.logbar{
+    margin-left: auto;
+    display: flex;
+    height: 3rem;
+}
+
+.logIn{
+    width: 4rem;
+    align-self: center;
+}
+.logbar button{
+    width: 10rem;
+}
+.logIn:hover{
+    text-decoration: underline;
+}
+header .coral-button:hover{
+    color:var(--coralRed);
+    background-color: white;
+}
+
+/*for search box*/
+.absolute{
+    position: absolute;
+    right: 7.5rem;
+    top: 50%; /*to make it vertically center*/
+    transform: translate(-50%, -50%); /*to make it vertically center*/
+}
+.search-box{
+    display: flex;
+    width: 19rem;
+    height: 2.5rem;
+    background: #f5f5f5;
+    border-radius: 1.625rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+.search-box>i{
+    color: #777;
+    font-size: 1rem;
+    left:1rem;
+    top:50%;
+    transform: translate(-50%,-50%);
+    margin:0 0.5rem;
+}
+.search-box > input{
+    /*flex: 1;*/
+    height: 2.2rem;
+    font-size: 1.1rem;
+    background-color: #f5f5f5;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+    outline:none;
+    border:none;
+    padding-left: 0.5rem;
+}
+
+/*for subnav*/
+
+.subnav{
+    position: relative;
+}
+.subnavbtn{
+    padding: 1rem;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.subnav-content{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 11.5rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.first{
+    min-width: 17.5rem;
+    max-width: 18rem;
+}
+.subnav-content li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+.subnav li:hover{
+    text-decoration: none;
+}
+.subnav-content :hover {
+    background-color:#f1f1f1;
+}
+.subnav:hover .subnav-content{
+    display: block;
+}
+/*end of subnav*/
+
+.toggle-button{
+    position:absolute;
+    top: 1.5rem;
+    right:1em;
+    color:black;
+    display: none;
+}
+/*end of header*/
+
+/*second part with video*/
+.video{
+    background-color: black;
+    display: flex;
+    margin:4rem 0rem;
+    color:white;
+    padding: 4em 3em;
+    align-items: center;
+    justify-content: center;
+}
+.video article{
+    margin: 4rem;
+}
+.video h1{
+    color: var(--coralRed);
+    line-height: 4rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.video p{
+    line-height: 2rem;
+    font-size: 1.2em;
+    margin-bottom: 2em ;
+}
+.video button{
+    font-size: 0.95rem;
+    padding:0.9rem 1.4rem;
+}
+
+.images{
+    position: relative;
+    cursor: pointer;
+}
+.playbutton{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.playbutton img{
+    border-radius: 50%;
+}
+/*beginning of section <main>*/
+.main{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.main h2{
+    font-size: 2.6em;
+    line-height: 3.5rem;
+}
+.main div h2{
+    margin:4rem 0;
+    padding: 0 1rem;
+}
+/*for search button*/
+.patreon-is{
+    padding:3rem 0px;
+    margin-bottom: 3rem;
+    word-spacing: 1px;
+}
+
+.searchbutton1{
+    margin: 3rem 0;
+    width: 80%;
+    height: 3rem;
+    background: #f5f5f5;
+    outline: none;
+    border: none;
+    border-radius: 1.625rem;
+    padding: 0 0rem 0rem 1.5rem;
+    font-size: 1.2rem;
+
+}
+.patreon-is .coral-button{
+    font-size: 0.95rem;
+    padding:0.9rem 1.4rem;
+    margin-left: 1rem;
+}
+
+/*For What's Patreon */
+.main article{
+    word-spacing: 1px;
+    margin-bottom: 5rem;
+}
+.main article p{
+    margin: 2rem 0;
+    line-height: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+/*For container section*/
+.container{
+    font-weight: 300;
+    text-align: start;
+}
+.person-left{
+    flex-direction: row-reverse;
+}
+.container>div{
+    display: flex;
+    margin-bottom: 4rem;
+}
+.container>div>div{
+    width: 50%;
+    margin-left: 2rem;
+}
+.container h3{
+    color: var(--coralRed);
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+}
+.container p{
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+}
+.person-in a{
+    text-decoration: none;
+    color: black;
+}
+.person-in a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--coralRed);
+}
+small{
+    font-weight: 300;
+}
+.person-in h4{
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+/*for icon implementation*/
+.person-in>div{
+    position: relative;
+    margin-bottom: 1rem;
+}
+.fa-thin{
+    color: var(--coralRed);
+    position: absolute;
+    top:50%;
+    left: 7rem;
+
+}
+.fa-thin.two{
+    left: 12.5rem;
+}
+.fa-thin.three{
+    left: 9.7rem;
+}
+
+/*Footer section*/
+footer{
+    background-color: black;
+    color: white;
+    padding: 2rem;
+}
+footer img{
+    width: 14px;
+    height: 12px;
+}
+.patreon-brand{
+    padding: 0.4rem;
+    width: 50%;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+
+
+/*Footer main div*/
+footer{
+    font-weight: 300;
+}
+.footer-main{
+    margin: 1rem 0.3rem;
+    display: flex;
+}
+.options{
+    margin-right: 10rem;
+    font-weight: 900;
+
+}
+.options>div{
+    width: 10rem;
+    border: 1px solid white;
+    margin-bottom: 0.5rem;
+    padding: 1rem 0.5rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+}
+.options .text{
+    text-align: center;
+    line-height: 1rem;/*doesnt work!*/
+}
+/*footer container*/
+.footerContainer{
+    display: flex;
+    font-size: 0.9rem;
+    line-height: 1rem;
+}
+.footerContainer ul{
+    margin-top: 1rem;
+    list-style: none;
+}
+.footerContainer li{
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+
+.footer-col:not(.footer-col:last-child){
+    margin-right: 3rem;
+}
+.footerContainer h4{
+    font-size: 0.65rem;
+}
+/*icon section*/
+
+.icons{
+    display: flex;
+    width: 50%;
+    margin:2rem 0;
+}
+.icons>div{
+    background-color: #37383a;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.icons>div:hover{
+    background-color: #b2b2b3;
+}
+
+.original{
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+.original>div{
+    margin-right: 2rem;
+    font-size: 0.9rem;
+}
+
+address{
+    font-size: 0.9rem;
+}
+
+br {   
+    content: "";
+    margin: 1.5rem;
+    display: block;
+    margin-bottom: -20px; 
+ }
+
+
+@media screen and (max-width:1023px){
+    /*for hamburger menu*/
+    .toggle-button{
+        display: block;
+        text-decoration: none;
+        align-items: center;
+        font-size: 1.1rem;
+        right: 0.8rem;
+        top: 25%;
+        transform: translate(-50%, -50%);
+    }
+    header .fa-brands{
+        position: absolute;
+        top:2rem;
+    }
+    header nav{
+        height: 6.5rem;
+        align-items: flex-start;
+
+    }
+    header nav .fa-brands{
+        align-self:flex-start;
+        margin-top: 1.5rem;
+    }
+
+    .toggled{
+       display: none;
+    }
+    .logbar{
+        margin-right: 2.5rem;
+    }
+    .absolute{
+        width: 100%;
+        transform: none;
+        left:0;
+        margin-top: 0.4rem;
+        justify-content: center;
+    }
+    .search-box{
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .search-box>i{
+        left:2.5rem;
+    }
+
+    .video{
+        margin-top: 3.7rem;
+    }
+    /*for footer*/
+    footer{
+        position: relative;
+    }
+    .footer-main{
+        flex-wrap: wrap;
+    }
+    .footerContainer{
+        flex-wrap: wrap;
+        width: 100%;
+
+    }
+    .footer-col{
+        width: 40%;
+        margin-top: 2.5rem;
+    }
+    .icons{
+        position: absolute;
+        top:0px;
+        right: 0;
+        justify-content: end;
+        margin-right: 2rem;
+    }
+}
+@media screen and (max-width:767px){
+    .search-box>i{
+        left:2rem;
+    }
+    .video{
+        flex-wrap:wrap;
+        margin:0;
+        padding: 2.5rem 0;
+        margin-top: 7.5rem;
+    }
+    .video article{
+        margin: 2rem;
+    }
+
+    .video h1{
+        font-size: 2.5rem;
+        padding-right: 3rem;
+    }
+    .images{
+        width: 80%;
+        margin:2rem;
+    }
+
+    /*For main section*/
+    .main{
+        width: 100%;
+    }
+    .patreon-is>div{
+        padding: 0;
+    
+    }
+    .patreon-is, article{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .main article{
+        padding: 3rem;
+        margin:0 auto;
+        
+    }
+    .searchbutton1{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 0.5rem;
+    }
+    .main .coral-button{
+        width: 100%;
+        margin: 0;
+    }
+    .container>div{
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+    .container>div>div{
+        width: 100%;
+        margin: 10px;
+    }
